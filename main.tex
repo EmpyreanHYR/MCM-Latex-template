@@ -1,0 +1,355 @@
+ %美赛模板：正文部分
+
+\documentclass[12pt]{article}  % 官方要求字号不小于 12 号，此处选择 12 号字体
+% \linespread{1.1}
+% \bibliographystyle{plain}
+% 本模板不需要填写年份，以当前电脑时间自动生成
+% 请在以下的方括号中填写队伍控制号
+\usepackage[123456]{easymcm}  % 载入 EasyMCM 模板文件
+\problem{B}  % 请在此处填写题号
+% \usepackage{mathptmx}  % 这是 Times 字体，中规中矩 
+\usepackage{palatino}  % mathpazo 这palatino是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{lastpage}
+\usepackage{threeparttable}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+	language=Python,
+	basicstyle=\ttfamily,
+	numbers=left,
+	numberstyle=\tiny\color{mygray},
+	breaklines=true,
+	frame=single,
+	showstringspaces=false,
+	keywordstyle=\color{blue},
+	morekeywords={True, False, None}, % 添加额外的关键字
+	commentstyle=\color{mygreen},
+	stringstyle=\color{mymauve},
+}
+
+\usepackage{paralist}
+\graphicspath{{img/}}          % 此处{img/}为相对路径，注意加上“/”
+ \let\itemize\compactitem
+ \let\enditemize\endcompactitem
+
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\title{Build an Army of Drones to Fight Wildfires}  % 标题
+
+% 如需要修改题头（默认为 MCM/ICM），请使用以下命令（此处修改为 MCM）
+%\renewcommand{\contest}{MCM}
+
+ %文档开始
+\begin{document}
+
+% 此处填写摘要内容
+\begin{abstract}
+    
+
+
+    % 美赛论文中无需注明关键字。若您一定要使用，
+    % 请将以下两行的注释号 '%' 去除，以使其生效
+    \vspace{5pt}  %mm	毫米	1 mm = 2.845 pt   pt 点	1 pt = 0.351 mm
+    \textbf{Keywords}: 
+
+\end{abstract}
+
+\maketitle  % 生成 Summary Sheet
+
+\tableofcontents  % 生成目录
+
+
+% 正文开始
+% Chapter 1: Introduction
+\section{Introduction}
+
+\subsection{Problem Background} %背景介绍
+
+
+\begin{figure}[htbp]  %h此处，t页顶，b页底，p独立一页，浮动体出现的位置
+\centering  %图表居中
+\includegraphics[width=.7\textwidth]{Fire_Situation.png} %图片的名称或者路径之中有空格会出问题 
+\caption{Fire Situation in Australia (Feb 2020 - Feb 2021)} % 图片标题 
+\label{fig:Fire Situation} % 图片标签，可以不写
+\end{figure}
+
+
+
+\subsection{Restatement of the Problem} %问题重述
+%文字内容
+
+
+
+%列表
+\begin{itemize} %拟解决的问题
+\setlength{\parsep}{0ex} %段落间距
+\setlength{\topsep}{2ex} %列表到上下文的垂直距离
+\setlength{\itemsep}{1ex} %条目间距
+\item 
+\item 
+\item
+\item 
+\end{itemize}
+
+\subsection{Literature Review} %文献综述
+%文字内内容
+
+%列表
+\begin{itemize}
+\setlength{\parsep}{0ex} %段落间距
+\setlength{\topsep}{2ex} %列表到上下文的垂直距离
+\setlength{\itemsep}{1ex} %条目间距  这三句如果删除就是各条贴在一起
+\item 
+
+\item
+ 
+\item 
+
+\item 
+
+\end{itemize}
+
+
+\subsection{Our Work} %工作分配
+The problem requires us to fight fires by optimizing the locations of two type of drones. Our work mainly includes the following:
+\begin{enumerate}[\bfseries 1.]
+    \setlength{\parsep}{0ex} %段落间距
+    \setlength{\topsep}{0.5pt} %列表到上下文的垂直距离
+    \setlength{\itemsep}{0.5pt} %条目间距
+    \item 
+    \item 
+    \item 
+\end{enumerate}
+In order to avoid complicated description, intuitively reflect our work process, the flow chart is shown in Figure :
+
+\begin{figure}[htbp]  %h此处，t页顶，b页底，p独立一页，浮动体出现的位置
+\centering  %图表居中
+\includegraphics[width=.9\textwidth]{Flow_Chart.png} %图片的名称或者路径之中有空格会出问题 
+\caption{Flow Chart of Our Work} % 图片标题 
+\end{figure}
+\vspace{-0.8cm}
+
+\section{Assumptions and Explanations} %假设与解释
+Considering that practical problems always contain many complex factors, first of all, we need to make reasonable assumptions to simplify the model, and each hypothesis is closely followed by its corresponding explanation:
+
+\begin{enumerate}[\bfseries \textit{Assumption} 1:]
+
+%假设1
+	\item \textbf{}\\
+%解释1
+	\textbf{\textit{Explanation:}}
+	
+	
+		\item \textbf{}\\
+	
+		\textbf{\textit{Explanation:}}
+		
+		
+			\item \textbf{}\\
+			
+			\textbf{\textit{Explanation:}}
+			
+			
+				\item \textbf{}\\
+				
+				\textbf{\textit{Explanation:}}
+\end{enumerate}
+Additional assumptions are made to simplify analysis for individual sections. These assumptions will be discussed at the appropriate locations.
+
+
+
+
+\section{Notations}%符号说明
+Some important mathematical notations used in this paper are listed in Table 1. 
+\begin{table}[htbp]
+\begin{center}
+\caption{Notations used in this paper}
+\begin{tabular}{c l}
+\toprule[2pt]
+\multicolumn{1}{m{3cm}}{\centering Symbol}
+&\multicolumn{1}{m{8cm}}{\centering Description }\\
+\midrule
+$x_i$& Longitude within the i-th Wildfire Grid \\
+$y_i$& Latitude within the i-th Wildfire Grid \\
+$\varOmega _i$& The area of the i-th grid\\
+$d_{ki}$& the distance $d_{ki}$ between the k-th roaming grid and the i-th grid \\
+$SC_k$ & Score for evaluating the k-th wildfire grid \\
+\vspace{5pt}%公式间有点挤，空一些
+$x^{( \alpha )}_{ki}$ & the $SSA_\alpha$ drone sent by the k-th EOC to the i-th wild-fire grid\\
+\vspace{3pt}
+$x^{( \beta )}_{ki}$ & the $RR_\beta$ drone sent by the k-th EOC to the i-th wildfire grid\\
+$t_{fly}^{\delta}$ & The flight time of drones\\
+\bottomrule[2pt]
+\end{tabular}\label{tb:notation}
+ \begin{tablenotes}
+        \footnotesize
+        \item[*] *There are some variables that are not listed here and will be discussed in detail in each section. %此处加入注释*信息
+      \end{tablenotes}
+\end{center}
+\end{table}
+\vspace{-1cm}%在\end{table}下加一行\vspace{-1cm} 其中-1的作用是缩短与下方文字距离的 切记！必须是负数
+
+\section{Model Preparation} %建模准备
+\subsection{Data Overview} %数据概览
+%文字内容
+
+\subsubsection{Data Collection} %数据采集
+The official website of FEC in Victoria, Australia was queried and lots of data about wildfires were obtained. And other data sources are shown in Table 2.
+
+\begin{table}[htbp]
+\begin{center}
+\caption{Data and Database Websites}
+\resizebox{\textwidth}{!}
+{\begin{tabular}{c c}
+\toprule[2pt]
+\multicolumn{1}{m{5cm}}{\centering \textbf{Database Names}}
+&\multicolumn{1}{m{10cm}}{\centering \textbf{Database Websites} }\\ %m后面是列宽
+\midrule
+Fire Alerts& https://www.globalforestwatch.org/map/ \\
+Altitude & https://search.earthdata.nasa.gov/search \\
+Latitude and Longitude & https://www.kaggle.com/carlosparadis/\\ 
+Google Scholar & https://scholar.google.com/ \\
+Maps& \copyright{} 2021 Mapbox \copyright{} OpenStreetMap\\
+\bottomrule[2pt]
+\end{tabular}}
+\end{center}
+\end{table}
+
+\subsubsection{Data Screening} %数据甄别
+%文本内容 
+
+
+%列表
+\begin{enumerate}[\bfseries 1.]
+	\setlength{\parsep}{0ex} %段落间距
+	\setlength{\topsep}{0ex} %列表到上下文的垂直距离
+	\setlength{\itemsep}{0ex} %条目间距
+	\item 
+	\item 
+	\item 
+\end{enumerate}
+
+%AB图
+\begin{figure}[htbp]
+    \centering    
+    \subfigure[Data Screening(left)]{				% 图片1([]内为子图标题)						
+    \includegraphics[width=0.45\textwidth]{Data_Screening(1).png}}			  % 子图1的图片宽度 不能空行
+    \subfigure[Data Screening(right)]{				% 图片2
+    \includegraphics[width=0.45\textwidth]{Data_Screening(2).png}}
+	\caption{Data Screening} % 图片标题 
+\end{figure}
+
+
+
+\section{XX model based on XX algorithm}  %模型的构建
+%模型综述的文字内容
+
+
+\subsection{The first model}  %第一个模型
+\subsubsection{First step in modelling} %建模第一步
+
+\begin{equation}  % 公式，独占一行、居中，自动编号
+	E = mc^2 
+	\label{aa}  % 标签
+\end{equation}  % 公式结束
+\begin{enumerate}[\bfseries \textit{XXX} 1:]  %开头是“XXX＋序号”的退位表格
+	\item	  %如果不想退位，可删除\\
+	\item	
+	\item 	
+\end{enumerate}
+
+
+\subsubsection{Second step in modelling} %建模第二步
+
+
+\subsection{The second model}  %第二个模型
+
+
+
+
+\section{Sensitivity Analysis}  %灵敏度分析
+   
+\section{Strengths and Weaknesses}  %论文模型优缺点
+
+\subsection{}  %优势
+\begin{itemize}  %无序列表
+	\item 
+	\item 
+	\item 
+\end{itemize}
+
+\subsection{}  %不足
+  \begin{itemize}  %无序列表
+  	\item 
+  	\item 
+  \end{itemize}
+   
+
+
+% 参考文献，此处以 MLA 引用格式为例
+\clearpage   %另起一页继续写。这时,你最好使用“\clearpage” 
+\begin{thebibliography}{99}
+	\bibitem{1} 
+	\bibitem{2} 
+	\bibitem{3} 
+	\bibitem{4} 
+	\bibitem{5} 
+	
+\end{thebibliography}
+
+% \includepdf[pages={1,2}]{Memo.pdf} 
+\newpage
+\begin{center}
+	\Huge{\texorpdfstring{%
+			Memorandum}{Memorandum}}
+	\addcontentsline{toc}{section}{Memorandum} % Add entry to the table of contents
+\end{center}
+
+\leaders\vrule width \linewidth\vskip 2pt % Add a bold horizontal line with a specified line width
+\vspace{-10pt} % Adjust the vertical space
+
+\begin{flushleft}
+	\textbf{To:} xx \\
+	\textbf{From:} Team XX \\
+	\textbf{Date:} January 22nd, 2024 \\
+	\textbf{Subject:} Your Subject Here% 主题
+\end{flushleft}
+
+%\vspace{-10pt} % Adjust the vertical space
+
+\leaders\vrule width \linewidth\vskip 2pt % Add a thin horizontal line with the same width
+
+
+	
+\newpage
+\appendix
+\section{Appendix:1}
+
+\lstinputlisting[language=python]{code/code1.py}%引用代码文件
+%报错别担心，是因为代码内部索引出了问题
+
+\section{Appendix:2}
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+
+
+\end{document}  % 结束

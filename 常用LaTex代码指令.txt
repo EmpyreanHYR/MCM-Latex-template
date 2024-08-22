@@ -1,0 +1,75 @@
+\section{}  %一级标题
+\subsection{}  %二级标题
+\subsubsection{} %三级标题
+
+\centering  %居中
+
+\caption{}  %标题
+
+\label{}    %标签
+
+\textbf{}   %加粗内容
+\textit{abc}  % 斜体，只对英文有效
+\textbf{\textit{abc}}  %同时使用粗体和斜体
+
+\ref{}      %引用（图、表、公式）
+
+\upcite{}   %引用参考文献
+
+\begin{itemize}  %无序列表
+    \item 
+    \item 
+    \item 
+\end{itemize}
+
+\usepackage{enumerate}  %有序列表
+\begin{enumerate}[1.]  % 可自定义编号样式
+    \item 
+    \item 
+    \item 
+    \item
+\end{enumerate}
+
+\begin{enumerate}[\bfseries \textit{XXX} 1:]  %开头是“XXX＋序号”的退位表格
+	\item	\\  %如果不想退位，可删除\\
+	\item	\\
+	\item 	\\
+\end{enumerate}
+
+%给公式外围加框
+\boxed{            
+}
+
+
+\toprule  % 顶部线
+\midrule  % 中部线
+\bottomrule  % 底部线
+
+
+
+%引用代码宏包
+\usepackage{listings}
+% 设置代码样式
+\lstset
+{
+    tabsize=4,
+    captionpos=b,
+    numbers=left,                    
+    numbersep=1em,                  
+    sensitive=true,
+    showtabs=false, 
+    frame=shadowbox,
+    breaklines=true,
+    keepspaces=true,                 
+    showspaces=false,                
+    showstringspaces=false,
+    breakatwhitespace=false,         
+    basicstyle=\yaheiconsola,
+    keywordstyle=\color{NavyBlue},
+    commentstyle=\color{codegreen},
+    numberstyle=\color{gray},
+    stringstyle=\color{PineGreen!90!black},
+    rulesepcolor=\color{red!20!green!20!blue!20}
+}
+
+\lstinputlisting[language=python]{code/main.py}%引用代码文件
