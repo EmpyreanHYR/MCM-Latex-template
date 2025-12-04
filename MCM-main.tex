@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}  % 官方要求字号不小于 12 号，此处选择 12 号字体
+% \linespread{1.1}
+% \bibliographystyle{plain}
+% 本模板不需要填写年份，以当前电脑时间自动生成
+% 请在以下的方括号中填写队伍控制号
+\usepackage[123456]{easymcm}  % 123456是队伍号 载入 EasyMCM 模板文件
+\problem{C}  % 请在此处填写题号
+\title{This is a Title }  % 标题
+
+
+% \usepackage{mathptmx}  % 这是 Times 字体，中规中矩 
+\usepackage{palatino}  % mathpazo 这palatino是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{lastpage}
+\usepackage{threeparttable}
+\usepackage{xcolor}
+
+\usepackage{url} % 支持网址链接，便于引用网络资源
+\usepackage{cite} % 优化参考文献引用格式
+\usepackage{graphicx} % 插入和管理图片
+\usepackage{pdflscape} % 使页面横向显示，适合宽表格
+\usepackage{lscape} % 旋转页面内容，适合横向表格或图片
+\usepackage{tabularx} % 支持自动调整宽度的表格
+\usepackage{afterpage} % 控制内容在下一页显示
+\usepackage{longtable} % 支持跨页长表格
+
+\usepackage[numbers,sort&compress]{natbib} % 参考文献排序与压缩显示
+
+\usepackage[figuresright]{rotating} % 支持图表旋转
+
+
+\usepackage{amsmath} % 数学公式增强
+\usepackage{amssymb} % 更多数学符号
+\usepackage{geometry} % 页面边距自定义
+\usepackage{enumitem} % 列表样式自定义
+\usepackage{caption} % 图表标题样式自定义
+\usepackage{fancyhdr} % 页眉页脚自定义
+\usepackage{titlesec} % 章节标题样式自定义
+
+
+\usepackage{lipsum} % 生成随机文本
+
+\usepackage{listings} % 插入和高亮显示代码
+% 设置代码样式
+\lstset{
+	numbers             =   left,               % 行号显示在左侧
+	showspaces          =   false,              % 不显示空格符号
+	numberstyle         =   \ttfamily,% 行号风格，小五号，等宽字体
+	showstringspaces    =   false,              % 不显示字符串中的空格
+	captionpos          =   t,                  % 标题位置在顶部
+	frame               =   lrtb,               % 显示四周边框
+	breaklines          =   true,               % 自动换行
+	columns             =   fixed,              % 固定列宽
+	basewidth           =   0.5em,              % 基础宽度
+	caption             =   \raggedright,       % 标题左对齐
+}
+
+% Python 代码样式
+\lstdefinestyle{Python}{
+	language        =   Python, % 语言设为Python
+	basicstyle      =   \ttfamily\color{black}, % 基本风格，小五号，等宽字体，黑色
+	keywordstyle    =   \color{blue}\bfseries\itshape, % 关键字风格，蓝色加粗斜体
+	stringstyle     =   \color{magenta}, % 字符串风格，洋红色
+	commentstyle    =   \color{red}\itshape, % 注释风格，红色斜体
+}
+
+% MATLAB 代码样式
+\lstdefinestyle{MATLAB}{
+	language        =   Matlab, % 语言设为MATLAB
+	basicstyle      =   \ttfamily\color{black}, % 基本风格，小五号，等宽字体，黑色
+	keywordstyle    =   \color{green}\bfseries\itshape, % 关键字风格，绿色加粗斜体
+	stringstyle     =   \color{purple}, % 字符串风格，紫色
+	commentstyle    =   \color{gray}\itshape, % 注释风格，绿色斜体
+}
+
+
+\usepackage{paralist}
+\graphicspath{{img/}}          % 此处{img/}为相对路径，注意加上“/”
+\let\itemize\compactitem
+\let\enditemize\endcompactitem
+
+\usepackage{multicol} % 多栏排版
+
+\usepackage{booktabs} % 优美的表格线
+\usepackage{hyperref} % 支持PDF跳转、超链接
+\usepackage{subcaption} % 子图标题，多个图片并排显示
+\usepackage {float}  % 更灵活地控制浮动体（如表格、图片）位置
+\usepackage{array} % 增强表格功能
+\hypersetup{hidelinks,
+	colorlinks=true,
+	allcolors=black,
+	pdfstartview=Fit,
+	breaklinks=true
+}
+\usepackage{siunitx} % 科学计数法和单位格式化
+
+
+
+
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+
+
+% 如需要修改题头（默认为 MCM/ICM），请使用以下命令（此处修改为 MCM）
+%\renewcommand{\contest}{MCM}
+
+%文档开始
+\begin{document}
+	
+	
+
+	\input{texfile/1abstract}%摘要  abstract.tex
+	
+	\input{texfile/2ProblemRestatement}%插入问题重述   ProblemRestatement.tex
+	
+%	\input{texfile/3ProblemAnalysis}%插入问题分析    ProblemAnalysis.tex
+	
+	\input{texfile/4AssumptionAndNotations}%插入模型假设及符号说明  AssumptionAndNotations.tex
+	
+	\input{texfile/5MakeModel} %插入模型的建立与求解   MakeModel.tex
+	
+	\input{texfile/6ErrorAnalysis} %插入误差分析   ErrorAnalysis.tex
+	
+	\input{texfile/7ModelEvaluation} %插入模型评价	ModelEvaluation.tex
+	
+	\input{texfile/8Reference} %插入参考文献   Reference.tex
+	
+	\input{texfile/9Appendix} %插入附录   Appendix.tex
+	
+
+\end{document}
