@@ -141,6 +141,13 @@
 \cfoot{}
 \rfoot{}
 
+% AI工具使用声明页面的页脚样式
+\fancypagestyle{aimain}{
+\fancyhf{}
+\lhead{\small \team}
+\rhead{\small Page \thepage}
+}
+
 % 信件/备忘录环境
 \newcounter{prefix}  % 创建隐藏前缀计数器，避免对 letter 环境编号
 \renewcommand{\theHsection}{\theprefix.\thesection}  % 针对 hyperref
@@ -245,5 +252,57 @@
     \pagestyle{fancy}
     \setlength\parskip{1ex}}  % 调整段间距
 
+
+
+
+    
+\def\AIcite{\@newl@bel b}
+\let\citation\@gobble
+\DeclareRobustCommand\AIcite{%
+  \@ifnextchar [{\@tempswatrue\@AIcitex}{\@tempswafalse\@AIcitex[]}}
+\def\@AIcitex[#1]#2{\leavevmode
+  \let\@AIcitea\@empty
+  \@AIcite{\@for\@AIciteb:=#2\do
+    {\@AIcitea\def\@AIcitea{,\penalty\@m\ }%
+     \edef\@AIciteb{\expandafter\@firstofone\@AIciteb\@empty}%
+     \if@filesw\immediate\write\@auxout{\string\citation{\@AIciteb}}\fi
+     \@ifundefined{b@\@AIciteb}{\hbox{\reset@font\bfseries ?}%
+       \G@refundefinedtrue
+       \@latex@warning
+         {Citation `\@AIciteb' on page \thepage \space undefined}}%
+       {\@AIcite@ofmt{\csname b@\@AIciteb\endcsname}}}}{#1}}
+\def\@AIcite#1#2{[AI: {#1\if@tempswa , #2\fi}]}
+\let\@AIcite@ofmt\hbox
+
+\def\reportname{Report on Use of AI}
+
+\providecommand\@AIlabel[1]{#1.~}
+
+\newenvironment{ReportAiUse}[1]
+     {\centerline{\underline{\large\sffamily\bfseries\reportname}}%
+     \vspace*{-.2em}
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@AIlabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@AIlabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+
+% AI工具使用声明部分的定义
+% 保存最后一页标签（包括附录），AI部分不计入总页数
+\def\AImatter{%
+  \clearpage
+  \pagestyle{aimain}}
 
 \endinput

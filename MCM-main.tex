@@ -42,6 +42,11 @@
 
 \usepackage{lipsum} % 生成随机文本
 
+\usepackage{cleveref} % 智能引用宏包，支持 \cref 命令自动添加图表标签前缀
+
+% 全局设置表格行高
+\renewcommand{\arraystretch}{1.3}
+
 \usepackage{listings} % 插入和高亮显示代码
 % 设置代码样式
 \lstset{
@@ -110,23 +115,33 @@
 	
 	
 
-	\input{texfile/1abstract}%摘要  abstract.tex
+	\input{texfile/0abstract}%摘要  abstract.tex
 	
-	\input{texfile/2ProblemRestatement}%插入问题重述   ProblemRestatement.tex
+	\tableofcontents  % 生成目录
 	
-%	\input{texfile/3ProblemAnalysis}%插入问题分析    ProblemAnalysis.tex
+	\input{texfile/1ProblemRestatement}%插入问题重述   ProblemRestatement.tex
 	
-	\input{texfile/4AssumptionAndNotations}%插入模型假设及符号说明  AssumptionAndNotations.tex
+%	\input{texfile/2ProblemAnalysis}%插入问题分析    ProblemAnalysis.tex
 	
-	\input{texfile/5MakeModel} %插入模型的建立与求解   MakeModel.tex
+	\input{texfile/3AssumptionAndNotations}%插入模型假设及符号说明  AssumptionAndNotations.tex
 	
-	\input{texfile/6ErrorAnalysis} %插入误差分析   ErrorAnalysis.tex
+	\input{texfile/4DataPreprocessing} %插入数据预处理   DataPreprocessing.tex
+	
+	\input{texfile/5ModelBuilding} %插入模型的建立与求解   ModelBuilding.tex
+	
+	\input{texfile/6SensitivityAndErrorAnalysis} %插入灵敏度分析和误差分析   SensitivityAndErrorAnalysis.tex
 	
 	\input{texfile/7ModelEvaluation} %插入模型评价	ModelEvaluation.tex
 	
 	\input{texfile/8Reference} %插入参考文献   Reference.tex
 	
-	\input{texfile/9Appendix} %插入附录   Appendix.tex
+	% 2025年美赛O奖论文大部分都没提供附录，如需提供请取消下一行注释
+	% \input{texfile/9Appendix} %插入附录   Appendix.tex
 	
+	% 标记正文最后一页，AI报告不计入总页数
+	\label{LastPage}
+
+	% 美赛要求使用AI工具需声明，如使用请取消下一行注释
+	 \input{texfile/10AIToolDeclaration} %插入AI工具使用声明   AIToolDeclaration.tex
 
 \end{document}
