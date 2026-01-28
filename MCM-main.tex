@@ -139,7 +139,9 @@
 	% \input{texfile/9Appendix} %插入附录   Appendix.tex
 	
 	% 标记正文最后一页，AI报告不计入总页数
-	\label{LastPage}
+	% 手动标注“正文最后一页”（在 AI 声明之前）
+	% \clearpage
+	% \label{MyLastPage}
 
 	% 美赛要求使用AI工具需声明，如使用请取消下一行注释
 	 \input{texfile/10AIToolDeclaration} %插入AI工具使用声明   AIToolDeclaration.tex

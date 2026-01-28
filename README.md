@@ -1,3 +1,13 @@
+<!--
+ * @Author: HuangYaorong 133381452+EmpyreanHYR@users.noreply.github.com
+ * @Date: 2025-11-13 18:43:42
+ * @LastEditors: HuangYaorong 133381452+EmpyreanHYR@users.noreply.github.com
+ * @LastEditTime: 2026-01-28 11:49:12
+ * @FilePath: \MCM-Latex-template\README.md
+ * @Description: 
+ * 
+ * Copyright (c) 2026 by HUANG Y. R. , All Rights Reserved. 
+-->
 # MCM-Latex-template
 
 MCM（数学建模竞赛）/ICM（交叉学科建模竞赛）论文 LaTeX 模板（基于 EasyMCM 扩展）。
@@ -41,15 +51,24 @@ MCM-Latex-template/
 ## 使用说明
 
 1. 在 `MCM-main.tex` 中设置队伍号、题号、标题：
+
    - 队伍号：`\usepackage[123456]{easymcm}`
    - 题号：`\problem{C}`
    - 标题：`\title{...}`
 2. 根据需要编辑/启用章节：在主文件中注释或取消注释 `\input{texfile/...}`。
 3. 图片放入 `texfile/figures/`，代码示例放入 `code/`。
 4. 可选部分：
+
    - 附录：取消 `\input{texfile/9Appendix}` 注释
    - AI 声明：取消 `\input{texfile/10AIToolDeclaration}` 注释
      - 总页数计数到 `\label{LastPage}` 前（即正文+参考文献/附录），AI 部分页码显示但不计入总页数。
+5. 如果要启用附录 `9Appendix.tex`，请将 `8Reference.tex`的最后一页的设置进入注释
+   ```
+   % \clearpage
+   %\label{MyLastPage}
+   ```
+
+
 
 ## 编译
 
