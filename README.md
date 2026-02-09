@@ -90,3 +90,5 @@ xelatex MCM-main.tex
 ## 许可证
 
 详见 LICENSE
+
+谢谢
